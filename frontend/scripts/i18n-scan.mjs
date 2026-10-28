@@ -33,7 +33,7 @@ const NOT_COPY = [
 ];
 
 // The product name is a proper noun and stays identical in every locale.
-const BRAND = new Set(['Wardrowbe', 'wardrowbe']);
+const BRAND = new Set(['Stylo', 'stylo']);
 
 function isCopy(raw) {
   // &ldquo; &rarr; &#8212; are typographic punctuation, not translatable copy, but their

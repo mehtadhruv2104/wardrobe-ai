@@ -23,7 +23,7 @@ import {
 import { CLOTHING_TYPES, TaggingProgress } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
-const CONCURRENCY_DOC_URL = 'https://github.com/Anyesh/wardrowbe/blob/main/.env.example';
+const CONCURRENCY_DOC_URL = 'https://github.com/mehtadhruv2104/wardrobe-ai/blob/main/.env.example';
 
 type ClothingTypeValue = (typeof CLOTHING_TYPES)[number]['value'];
 

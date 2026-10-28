@@ -607,7 +607,7 @@ class NotificationDispatcher:
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <div style="text-align: center; margin-bottom: 30px;">
-                <h1 style="color: #1F2937; margin: 0;">Wardrowbe</h1>
+                <h1 style="color: #4A1F5C; margin: 0;">Stylo</h1>
             </div>
 
             <div style="background: #F9FAFB; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
@@ -628,13 +628,13 @@ class NotificationDispatcher:
 
             <div style="text-align: center; margin: 30px 0;">
                 <a href="{self.app_url}/dashboard/history"
-                   style="background: #111827; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; margin: 5px;">
+                   style="background: #4A1F5C; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block; margin: 5px;">
                     View Outfit
                 </a>
             </div>
 
             <div style="text-align: center; color: #9CA3AF; font-size: 12px; margin-top: 40px;">
-                <p>Sent by Wardrowbe</p>
+                <p>Sent by Stylo</p>
                 <p>
                     <a href="{self.app_url}/dashboard/notifications" style="color: #6B7280;">
                         Manage notification settings
@@ -647,7 +647,7 @@ class NotificationDispatcher:
 
         # Build text body with highlights
         text_parts = [
-            f"Wardrowbe - {day_label}'s Outfit",
+            f"Stylo - {day_label}'s Outfit",
             "",
             f"Occasion: {outfit.occasion.title()}",
             "",

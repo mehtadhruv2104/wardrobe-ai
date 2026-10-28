@@ -1,14 +1,13 @@
 <p align="center">
-  <img src="./frontend/public/logo.svg" alt="wardrowbe" width="120" height="120">
+  <img src="./frontend/public/logo.svg" alt="Stylo" width="120" height="120">
 </p>
 
-<h1 align="center">wardrowbe</h1>
+<h1 align="center">Stylo</h1>
 
 <p align="center">
-  Put your wardrobe in rows. Snap. Organize. Wear.
+  Your personal AI stylist. Outfits picked from your own wardrobe, for the weather and your day.
 </p>
 <p align="center">
-  <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Built%20with%20Claude%20Code-D97757?style=for-the-badge&logo=claude&logoColor=white" alt="Built with Claude Code"></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
@@ -24,21 +23,9 @@
   <a href="#contributing">Contributing</a>
 </p>
 
-<p align="center">
-  <a href="https://buymeacoffee.com/anyesh">
-    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me A Coffee">
-  </a>
-</p>
+Stylo is an AI stylist that works with the clothes you already own. Snap photos of your pieces and Stylo tags them automatically, then puts together outfits for today's weather and occasion. Every outfit you accept, wear or rate teaches it more about your style.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Google%20Play-Coming%20Soon-34A853?style=for-the-badge&logo=googleplay&logoColor=white" alt="Google Play - Coming Soon">
-  &nbsp;
-  <a href="https://apps.apple.com/us/app/wardrowbe/id6759947671">
-    <img src="https://img.shields.io/badge/App%20Store-0D96F6?style=for-the-badge&logo=appstore&logoColor=white" alt="App Store">
-  </a>
-</p>
-
-Self-hosted wardrobe management with AI-powered outfit recommendations. Take photos of your clothes, let AI tag them, and get daily outfit suggestions based on weather and occasion.
+> Stylo is built on [wardrowbe](https://github.com/Anyesh/wardrowbe) by Anish S., released under the MIT License.
 
 ## Features
 
@@ -54,7 +41,7 @@ Self-hosted wardrobe management with AI-powered outfit recommendations. Take pho
 
 ## Languages
 
-Wardrowbe's UI is fully translated into 8 languages via `next-intl`. Pick a language from Settings, or let it follow your browser automatically.
+Stylo's UI is fully translated into 8 languages via `next-intl`. Pick a language from Settings, or let it follow your browser automatically.
 
 | Language | Locale code |
 |----------|-------------|
@@ -122,8 +109,8 @@ Get your API key from https://platform.openai.com/api-keys
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/wardrowbe.git
-cd wardrowbe
+git clone https://github.com/mehtadhruv2104/wardrobe-ai.git
+cd wardrobe-ai
 
 # Copy environment template
 cp .env.example .env
@@ -190,7 +177,7 @@ docker compose logs -f frontend backend
 
 ## AI Configuration
 
-Wardrowbe works with any OpenAI-compatible API. You need two types of models:
+Stylo works with any OpenAI-compatible API. You need two types of models:
 - **Vision model**: Analyzes clothing images to extract colors, patterns, styles
 - **Text model**: Generates outfit recommendations and descriptions
 
@@ -314,7 +301,7 @@ docker compose exec backend alembic upgrade head
 Images are tagged `backend-latest` / `frontend-latest`, and each release also
 publishes `backend-<version>` / `frontend-<version>` (e.g. `backend-1.3.0`). To
 pin a deployment to a specific release, replace the `-latest` tags in the
-compose file with the version, e.g. `ghcr.io/anyesh/wardrowbe:backend-1.3.0`.
+compose file with the version, e.g. `ghcr.io/mehtadhruv2104/stylo:backend-1.3.0`.
 
 ### Kubernetes
 
@@ -581,8 +568,8 @@ docker compose exec redis redis-cli ping
 ### Getting Help
 
 If you're still stuck:
-1. Check existing [GitHub Issues](https://github.com/yourusername/wardrowbe/issues)
-2. Search [Discussions](https://github.com/yourusername/wardrowbe/discussions)
+1. Check existing [GitHub Issues](https://github.com/mehtadhruv2104/wardrobe-ai/issues)
+2. Search [Discussions](https://github.com/mehtadhruv2104/wardrobe-ai/discussions)
 3. Create a new issue with:
    - Output of `docker compose ps`
    - Relevant logs from `docker compose logs`
@@ -593,20 +580,9 @@ If you're still stuck:
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## Support
-
-If you find wardrowbe useful, consider supporting its development:
-
-<a href="https://buymeacoffee.com/anyesh"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me A Coffee"></a>
-
-Thanks to our supporters:
-
-- [@aaratisharma-star](https://github.com/aaratisharma-star)
-- [@zkhcohen](https://github.com/zkhcohen)
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. It is derived from [wardrowbe](https://github.com/Anyesh/wardrowbe) (MIT, © 2026 Anish S.).
 
 ## Requirements
 

@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ISSUE_MESSAGE: >
-        Thanks for opening your first issue in Wardrowbe! Please make sure you've checked the
+        Thanks for opening your first issue in Stylo! Please make sure you've checked the
         [CONTRIBUTING guide](https://github.com/${{ github.repository }}/blob/main/CONTRIBUTING.md)
         and the deployment docs. A maintainer will take a look soon.
       PR_MESSAGE: >
-        Thanks for your first pull request to Wardrowbe! Please make sure you've read the
+        Thanks for your first pull request to Stylo! Please make sure you've read the
         [CONTRIBUTING guide](https://github.com/${{ github.repository }}/blob/main/CONTRIBUTING.md),
         especially the PR title format section. A maintainer will review this soon.
     steps:

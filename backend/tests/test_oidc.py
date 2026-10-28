@@ -157,6 +157,4 @@ class TestGetJwkClient:
             mock_cls.return_value = MagicMock()
             oidc._get_jwk_client(uri, ca_bundle=None)
             _, kwargs = mock_cls.call_args
-            assert kwargs["headers"] == {
-                "User-Agent": "Mozilla/5.0 (compatible; WardrowbeBackend/1.0)"
-            }
+            assert kwargs["headers"] == {"User-Agent": "Mozilla/5.0 (compatible; StyloBackend/1.0)"}

@@ -75,8 +75,8 @@ class NtfyProvider:
             result = await self.send(
                 NtfyNotification(
                     topic=self.topic,
-                    title="Wardrowbe Test",
-                    message="This is a test notification from Wardrowbe.",
+                    title="Stylo Test",
+                    message="This is a test notification from Stylo.",
                     tags=["white_check_mark", "shirt"],
                     priority=2,
                 )
@@ -103,7 +103,7 @@ class MattermostAttachment:
 @dataclass
 class MattermostMessage:
     text: str
-    username: str = "Wardrowbe"
+    username: str = "Stylo"
     icon_emoji: str = ":shirt:"
     attachments: list[MattermostAttachment] = field(default_factory=list)
 
@@ -149,9 +149,7 @@ class MattermostProvider:
 
     async def test_connection(self) -> tuple[bool, str]:
         try:
-            result = await self.send(
-                MattermostMessage(text="This is a test message from Wardrowbe.")
-            )
+            result = await self.send(MattermostMessage(text="This is a test message from Stylo."))
             if result.get("success"):
                 return True, "Test notification sent successfully"
             return False, result.get("error", "Unknown error")
@@ -176,7 +174,7 @@ class EmailProvider:
         self.smtp_user = os.getenv("SMTP_USER")
         self.smtp_password = os.getenv("SMTP_PASSWORD")
         self.smtp_use_tls = os.getenv("SMTP_USE_TLS", "true").lower() == "true"
-        self.from_name = os.getenv("SMTP_FROM_NAME", "Wardrowbe")
+        self.from_name = os.getenv("SMTP_FROM_NAME", "Stylo")
         self.from_email = os.getenv("SMTP_FROM_EMAIL", self.smtp_user)
 
     def is_configured(self) -> bool:
@@ -225,9 +223,9 @@ class EmailProvider:
             result = await self.send(
                 EmailMessage(
                     to=self.to_address,
-                    subject="Wardrowbe - Test Notification",
-                    html_body="<p>This is a test email from Wardrowbe.</p>",
-                    text_body="This is a test email from Wardrowbe.",
+                    subject="Stylo - Test Notification",
+                    html_body="<p>This is a test email from Stylo.</p>",
+                    text_body="This is a test email from Stylo.",
                 )
             )
             if result.get("success"):
@@ -301,7 +299,7 @@ class ExpoPushProvider:
             result = await self.send(
                 ExpoPushMessage(
                     to=self.push_token,
-                    title="Wardrowbe Test",
+                    title="Stylo Test",
                     body="Push notifications are working!",
                 )
             )
@@ -327,12 +325,12 @@ def build_notification_email(
     <p style="color: #374151; line-height: 1.6;">{body}</p>
     <div style="text-align: center; margin: 30px 0;">
         <a href="{cta_url}"
-           style="background: #111827; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block;">
+           style="background: #4A1F5C; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block;">
             {cta_text}
         </a>
     </div>
     <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 20px 0;">
-    <p style="color: #9CA3AF; font-size: 12px;">Sent by <a href="{app_url}" style="color: #9CA3AF;">Wardrowbe</a></p>
+    <p style="color: #9CA3AF; font-size: 12px;">Sent by <a href="{app_url}" style="color: #9CA3AF;">Stylo</a></p>
 </div>"""
     return EmailMessage(to=to, subject=subject, html_body=html_body, text_body=body)
 
@@ -345,9 +343,9 @@ def build_family_invite_email(
     app_url: str,
 ) -> EmailMessage:
     invite_url = f"{app_url}/invite?token={invite_token}"
-    subject = f"{inviter_name} invited you to join {family_name} on Wardrowbe"
+    subject = f"{inviter_name} invited you to join {family_name} on Stylo"
     body_text = (
-        f'{inviter_name} invited you to join the family "{family_name}" on Wardrowbe. '
+        f'{inviter_name} invited you to join the family "{family_name}" on Stylo. '
         f"Click here to accept: {invite_url}"
     )
     html_body = f"""\
@@ -355,18 +353,18 @@ def build_family_invite_email(
     <h2 style="color: #111827;">You&rsquo;re invited!</h2>
     <p style="color: #374151; line-height: 1.6;">
         <strong>{inviter_name}</strong> invited you to join the family
-        <strong>{family_name}</strong> on Wardrowbe.
+        <strong>{family_name}</strong> on Stylo.
     </p>
     <div style="text-align: center; margin: 30px 0;">
         <a href="{invite_url}"
-           style="background: #111827; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block;">
+           style="background: #4A1F5C; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; display: inline-block;">
             Accept Invitation
         </a>
     </div>
     <p style="color: #9CA3AF; font-size: 13px;">
-        If you don&rsquo;t have a Wardrowbe account yet, you&rsquo;ll be asked to create one first.
+        If you don&rsquo;t have a Stylo account yet, you&rsquo;ll be asked to create one first.
     </p>
     <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 20px 0;">
-    <p style="color: #9CA3AF; font-size: 12px;">Sent by <a href="{app_url}" style="color: #9CA3AF;">Wardrowbe</a></p>
+    <p style="color: #9CA3AF; font-size: 12px;">Sent by <a href="{app_url}" style="color: #9CA3AF;">Stylo</a></p>
 </div>"""
     return EmailMessage(to=to, subject=subject, html_body=html_body, text_body=body_text)

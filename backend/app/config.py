@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     )
 
     # Application
-    app_name: str = "Wardrowbe"
+    app_name: str = "Stylo"
     debug: bool = False
     secret_key: str = Field(default=DEFAULT_SECRET_KEY)
     studio_disabled: bool = False
@@ -197,7 +197,7 @@ class Settings(BaseSettings):
         return "unknown"
 
     def get_geocoding_user_agent(self) -> str:
-        return self.geocoding_user_agent or "Wardrowbe/1.0"
+        return self.geocoding_user_agent or "Stylo/1.0"
 
 
 @lru_cache

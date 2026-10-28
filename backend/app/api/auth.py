@@ -49,7 +49,7 @@ def _oidc_configured() -> bool:
     return bool(settings.oidc_issuer_url and settings.oidc_client_id)
 
 
-MOBILE_APP_SCHEME = "wardrowbe"
+MOBILE_APP_SCHEME = "stylo"
 
 
 @router.get("/mobile-callback")

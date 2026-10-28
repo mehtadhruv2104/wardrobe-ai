@@ -1,6 +1,6 @@
-# Contributing to Wardrowbe
+# Contributing to Stylo
 
-Thank you for your interest in contributing to Wardrowbe! This document provides guidelines and information for contributors.
+Thank you for your interest in contributing to Stylo! This document provides guidelines and information for contributors.
 
 ## Code of Conduct
 
@@ -47,8 +47,8 @@ look.
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/wardrowbe.git
-cd wardrowbe
+git clone https://github.com/mehtadhruv2104/wardrobe-ai.git
+cd wardrobe-ai
 
 # Create environment file
 cp .env.example .env
@@ -151,7 +151,7 @@ export function ItemCard({ item, onSelect }: ItemCardProps) {
 
 ## Internationalization
 
-Wardrowbe ships in 8 languages. **Every user-visible string must go through `next-intl`.** A PR that
+Stylo ships in 8 languages. **Every user-visible string must go through `next-intl`.** A PR that
 hardcodes English will be blocked by CI.
 
 Translation files live in `frontend/messages/<locale>/<namespace>.json`, split by feature area.

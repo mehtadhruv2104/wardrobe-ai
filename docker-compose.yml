@@ -35,7 +35,7 @@ services:
 
   # FastAPI Backend
   backend:
-    image: ghcr.io/anyesh/wardrowbe:backend-latest
+    image: ghcr.io/mehtadhruv2104/stylo:backend-latest
     container_name: wardrobe-backend
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -83,7 +83,7 @@ services:
 
   # Next.js Frontend
   frontend:
-    image: ghcr.io/anyesh/wardrowbe:frontend-latest
+    image: ghcr.io/mehtadhruv2104/stylo:frontend-latest
     container_name: wardrobe-frontend
     environment:
       # NEXT_PUBLIC_API_URL is the pre-1.6 name, still honored so existing .env files keep working.
@@ -101,7 +101,7 @@ services:
 
 # Background Worker for AI Tagging
   worker:
-    image: ghcr.io/anyesh/wardrowbe:backend-latest
+    image: ghcr.io/mehtadhruv2104/stylo:backend-latest
     container_name: wardrobe-worker
     command: arq app.workers.worker.WorkerSettings
     extra_hosts:
@@ -134,7 +134,7 @@ services:
 # Local image work (rotation, background removal) on its own queue, so a bulk
 # batch of it cannot block AI tagging behind it.
   image-worker:
-    image: ghcr.io/anyesh/wardrowbe:backend-latest
+    image: ghcr.io/mehtadhruv2104/stylo:backend-latest
     container_name: wardrobe-image-worker
     command: arq app.workers.image_worker.ImageWorkerSettings
     environment:

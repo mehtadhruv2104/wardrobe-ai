@@ -196,7 +196,7 @@ export default function SettingsPage() {
   const [measurementsDirty, setMeasurementsDirty] = useState(false);
   const [unitSystem, setUnitSystem] = useState<UnitSystem>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('wardrowbe_unit_system') as UnitSystem) || 'metric';
+      return (localStorage.getItem('stylo_unit_system') as UnitSystem) || 'metric';
     }
     return 'metric';
   });
@@ -416,7 +416,7 @@ export default function SettingsPage() {
     }
     setMeasurements(converted);
     setUnitSystem(newSystem);
-    localStorage.setItem('wardrowbe_unit_system', newSystem);
+    localStorage.setItem('stylo_unit_system', newSystem);
   };
 
   const handleMeasurementChange = (key: string, value: string) => {

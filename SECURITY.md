@@ -40,7 +40,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 ## Security Best Practices
 
-When self-hosting Wardrowbe, follow these recommendations:
+When self-hosting Stylo, follow these recommendations:
 
 ### Secrets Management
 
@@ -96,4 +96,4 @@ When self-hosting Wardrowbe, follow these recommendations:
 
 ## Acknowledgments
 
-We appreciate security researchers who help keep Wardrowbe secure. Contributors will be acknowledged (with permission) in release notes.
+We appreciate security researchers who help keep Stylo secure. Contributors will be acknowledged (with permission) in release notes.

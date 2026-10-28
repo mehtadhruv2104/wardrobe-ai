@@ -11,8 +11,8 @@ export const dynamic = 'force-dynamic';
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Wardrowbe',
-  description: 'AI-powered wardrobe management and outfit recommendations',
+  title: 'Stylo',
+  description: 'Your personal AI stylist. Outfits picked from your own wardrobe for the weather and your day.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
